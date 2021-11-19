@@ -1,0 +1,92 @@
+1.mengidentifikasi masalah
+2. membuat erd 
+3.membuat tabel di mysql
+
+C:\Users\asus>cd..
+
+C:\Users>cd..
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 133
+Server version: 10.4.19-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| db_estory          |
+| db_estory1         |
+| db_sistem1         |
+| dblogin            |
+| dtb_estory         |
+| e storyy           |
+| e.story            |
+| evopbo             |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
+| tugaspbodatabase   |
++--------------------+
+14 rows in set (0.001 sec)
+
+MariaDB [(none)]> use dblogin
+Database changed
+MariaDB [dblogin]> show tables;
++-------------------+
+| Tables_in_dblogin |
++-------------------+
+| tb_dosen          |
+| tb_mhs            |
+| tblogih           |
++-------------------+
+3 rows in set (0.001 sec)
+
+MariaDB [dblogin]> desc tb_dosen;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| id           | int(30)      | NO   | PRI | NULL    |       |
+| nama         | varchar(40)  | NO   |     | NULL    |       |
+| absensi      | char(30)     | NO   |     | NULL    |       |
+| alamat       | varchar(100) | NO   |     | NULL    |       |
+| administrasi | varchar(60)  | NO   |     | NULL    |       |
+| no_telpon    | varchar(20)  | NO   |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+6 rows in set (0.111 sec)
+
+MariaDB [dblogin]> desc tb_mhs;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| nim           | int(20)      | NO   |     | NULL    |       |
+| nama          | varchar(50)  | NO   |     | NULL    |       |
+| jenis_kelamin | varchar(20)  | NO   |     | NULL    |       |
+| absensi       | varchar(30)  | NO   |     | NULL    |       |
+| alamat        | varchar(100) | NO   |     | NULL    |       |
+| id            | int(30)      | NO   | PRI | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+6 rows in set (0.209 sec)
+
+MariaDB [dblogin]> desc tblogih;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| username | varchar(30) | NO   | PRI | NULL    |       |
+| password | varchar(40) | NO   |     | NULL    |       |
+| name     | varchar(30) | NO   |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+5.pengkodean
+6.test.
